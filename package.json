@@ -88,5 +88,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-react-pug": "^3.2.0",
+    "eslint-plugin-react-pug": "^0.0.6"
   }
 }

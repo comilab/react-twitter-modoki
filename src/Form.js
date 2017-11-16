@@ -41,16 +41,13 @@ export default class Form extends Component {
   }
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <div>
-          <textarea value={this.state.message} onChange={this.handleChange.bind(this)}></textarea>
-          <div>{this.state.error}</div>
-        </div>
-        <div>
-          <button type="submit" disabled={!this.state.isValid}>送信</button>
-        </div>
-      </form>
-    );
+    return pug`
+      form(onSubmit=this.handleSubmit.bind(this))
+        div
+          textarea(value=this.state.message, onChange=this.handleChange.bind(this))
+          div=this.state.error
+        div
+          button(type="submit", disabled=!this.state.isValid) 送信
+    `
   }
 }

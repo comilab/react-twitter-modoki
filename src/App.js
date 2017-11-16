@@ -23,13 +23,12 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h1>{this.state.title}</h1>
-        <Form onSubmit={this.handleSubmit.bind(this)}/>
-        <Messages messages={this.state.messages} />
-      </div>
-    );
+    return pug`
+      div
+        h1=this.state.title
+        Form(onSubmit=this.handleSubmit.bind(this))
+        Messages(messages=this.state.messages)
+    `;
   }
 }
 
